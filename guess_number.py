@@ -11,7 +11,11 @@ while remaining > 0 and guess != number:
 
     if (guess == "q") or (number == int(guess)):
         break
-        
+    elif int(guess) > number:
+        print("Too high!", end = " ")
+    elif int(guess) < number:
+        print("Too low!", end = " ")
+
 if guess == "q":
     print(f"You decided to quit! The number was {number}.")
 elif int(guess) == number:
